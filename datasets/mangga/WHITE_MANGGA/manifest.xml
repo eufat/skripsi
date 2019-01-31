@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+ <file extension="raw" type="capture">capture/WHITE_MANGGA.raw</file>
+ <file extension="hdr" type="capture">capture/WHITE_MANGGA.hdr</file>
+ <file extension="xml" type="properties">metadata/WHITE_MANGGA.xml</file>
+ <file extension="xsl" type="properties">metadata/WHITE_MANGGA.xsl</file>
+ <file extension="png" type="preview">WHITE_MANGGA.png</file>
+</manifest>

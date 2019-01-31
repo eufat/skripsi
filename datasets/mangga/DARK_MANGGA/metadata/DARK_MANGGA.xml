@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="DARK_MANGGA.xsl"?>
+<properties><header><key field="sensor type">FX10</key>
+        <key field="sensor id">1200018_Elcee</key>
+        <key field="frame rate">15.000003814697</key>
+        <key field="integration time">2</key>
+        <key field="samples">512</key>
+        <key field="active bands">224</key>
+        <key field="spatial binning">2</key>
+        <key field="spectral binning">2</key>
+        <key field="frames recorded">256</key>
+        <key field="frames dropped">0</key>
+        <key field="data format">BIL</key>
+        <key field="date">2019-01-31</key>
+        <key field="date text">Thursday, January 31, 2019</key>
+        <key field="time">02:49:04</key>
+        <key field="calibration pack">C:/Users/Public/Documents/Specim/CalibrationPacks/1200018_20180605_FX_calpack.scp</key>
+    </header>
+    <userdefined><key field="sample name">DARK_MANGGA</key>
+        <key field="operator">Daun</key>
+        <key field="description"></key>
+        <key field="sensor temperature">46.303741455078</key>
+        <key field="sensor prefix"></key>
+    </userdefined>
+</properties>

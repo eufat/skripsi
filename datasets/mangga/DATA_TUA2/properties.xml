@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+ <property name="timestampformat">!%Y-%m-%d_%H-%M-%S</property>
+ <property name="timestamp">2019-01-31_02-58-33</property>
+ <property name="namingformat">prefix_name</property>
+ <property name="countervalue">0048</property>
+ <property name="name">DATA_TUA2</property>
+ <property name="prefix"></property>
+</properties>

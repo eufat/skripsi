@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+ <file extension="raw" type="capture">capture/DATA_TUA4.raw</file>
+ <file extension="hdr" type="capture">capture/DATA_TUA4.hdr</file>
+ <file extension="xml" type="properties">metadata/DATA_TUA4.xml</file>
+ <file extension="xsl" type="properties">metadata/DATA_TUA4.xsl</file>
+ <file extension="png" type="preview">DATA_TUA4.png</file>
+</manifest>
