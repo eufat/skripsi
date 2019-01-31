@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+ <property name="namingformat">prefix_name</property>
+ <property name="prefix"></property>
+ <property name="timestamp">2019-01-29_09-29-17</property>
+ <property name="countervalue">0048</property>
+ <property name="name">BISBUL</property>
+ <property name="timestampformat">!%Y-%m-%d_%H-%M-%S</property>
+</properties>
