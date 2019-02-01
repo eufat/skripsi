@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+ <file type="capture" extension="raw">capture/108_62_32_white.raw</file>
+ <file type="capture" extension="hdr">capture/108_62_32_white.hdr</file>
+ <file type="properties" extension="xml">metadata/108_62_32_white.xml</file>
+ <file type="properties" extension="xsl">metadata/108_62_32_white.xsl</file>
+ <file type="preview" extension="png">108_62_32_white.png</file>
+</manifest>

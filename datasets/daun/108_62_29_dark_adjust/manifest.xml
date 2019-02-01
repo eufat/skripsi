@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+ <file type="capture" extension="raw">capture/108_62_29_dark_adjust.raw</file>
+ <file type="capture" extension="hdr">capture/108_62_29_dark_adjust.hdr</file>
+ <file type="properties" extension="xml">metadata/108_62_29_dark_adjust.xml</file>
+ <file type="properties" extension="xsl">metadata/108_62_29_dark_adjust.xsl</file>
+ <file type="preview" extension="png">108_62_29_dark_adjust.png</file>
+</manifest>
