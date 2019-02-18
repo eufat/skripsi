@@ -8,19 +8,38 @@
 - [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
 ### Setup and start
-Build an image and run the container:
+Create and move to temporary folder:
 ```
-mkdir /temp && cd /temp
-git clone https://github.com/eufat/dockerfiles.git && cd dockerfiles/jupyter-keras-gpu
+mkdir /temp
+cd /temp
+```
+Clone [dockerfiles](https://github.com/eufat/dockerfiles) repository:
+```
+git clone https://github.com/eufat/dockerfiles.git
+cd dockerfiles/jupyter-keras-gpu
+```
+Build docker image as `jupyter-gpu` tag:
+```
 nvidia-docker build -t jupyter-gpu .
-cd /root && git clone https://github.com/eufat/skripsi.git
-nvidia-docker run -it -d --mount type=bind,source=/root/skripsi/,target=/notebooks/skripsi -p 8888:8888 -p 6006:6006 --name skripsi jupyter-gpu
 ```
-To start the container you have been built:
+Clone this repository to root directory:
+```
+cd /root
+git clone https://github.com/eufat/skripsi.git
+```
+Run `jupyter-gpu` image as `skripsi` container and mount it to host directory:
+```
+nvidia-docker run -it -d \
+    --mount type=bind,source=/root/skripsi/,target=/notebooks/skripsi \
+    -p 8888:8888 -p 6006:6006 \
+    --name skripsi \
+    jupyter-gpu
+```
+Start the `skripsi` container you have built:
 ```
 nvidia-docker start skripsi
 ```
-(Note: add this command on your remote server startup script)
+(Optional: add `nvidia-docker start skripsi` command to your remote server startup script)
 
 ### JupyterLab
 Open `localhost:8888/lab` or `server_ip_address:8888/lab` when using remote server (allow port 8888 in remote server firewall first).
