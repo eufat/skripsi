@@ -1,0 +1,16 @@
+1. Polyphenol itu apanya flavonoid dan phenolic acid? 
+jawabnya: Polifenol itu kategori yang mencakup phenolic acid dan flavonoid, jawabnya udah bener sebenernya cuma belom jelas aja.
+
+Kalo dari wikipedia: Polyphenols[1][2] (/?p?li'fi?no?l, -n?l/; also known as polyhydroxyphenols) are a structural class of mainly natural, but also synthetic or semisynthetic, organic chemicals characterized by the presence of large multiples of phenol structural units
+
+2. Banyak format proposal yang salah (ini emang guenya males ngeformat proposal skripsi hehehe)
+
+3. Output dari modelnya apa, apa yang mau diprediksi? 
+jawabnya: Untuk klasifikasi rentang dari kandungan Polifenol 0-10, 11-20, 21-30 jadi kebagi fenol yang sedikit, sedang dan banyak. 
+
+Insight: Ini juga karena gue belom eksplor nnti layer terakhir dari DNN nya apa, karena datanya belom ada, kan bisa sebenernya bisa jadi klasifikator regresi dan lain-lain. Jadi gak bisa ditentuin outputnya mau gimana.
+
+4. Penggunaan GPU kayak nembak nyamuk pake meriam?
+jawabnya: Saya mau benchmark pengujian antara CPU dan GPU.
+
+Insight: Sebenernya pakai CPU bisa, cuma untuk training deep neural networks lama banget, capek nunggunya. Gue juga udah sering pakai GPU untuk model-model Deep Neural Networks, lagian sekarang GPU udah affordable banget kok.
