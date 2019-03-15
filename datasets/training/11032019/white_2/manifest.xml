@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+ <file type="capture" extension="raw">capture/white_2.raw</file>
+ <file type="capture" extension="hdr">capture/white_2.hdr</file>
+ <file type="properties" extension="xml">metadata/white_2.xml</file>
+ <file type="properties" extension="xsl">metadata/white_2.xsl</file>
+ <file type="preview" extension="png">white_2.png</file>
+</manifest>
