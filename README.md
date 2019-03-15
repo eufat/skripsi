@@ -46,3 +46,16 @@ Open `localhost:8888/lab` or `server_ip_address:8888/lab` when using remote serv
 
 ### TensorBoard
 Run `tensorboard --logdir=/notebooks/logs --host 0.0.0.0` inside container or in JupyterLab terminal. Open `localhost:6006` or `server_ip_address:6006` when using remote server (allow port 6006 in remote server firewall first).
+
+### Pulling datasets
+Install [Git LFS](https://git-lfs.github.com/) first:
+```
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+sudo apt-get install git-lfs
+```
+Inside skripsi repository, pull `.raw` HSI datasets:
+```
+git lfs install
+git lfs pull
+```
+
