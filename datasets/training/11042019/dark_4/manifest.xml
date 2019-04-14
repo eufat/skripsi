@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+ <file type="capture" extension="raw">capture/dark_4.raw</file>
+ <file type="capture" extension="hdr">capture/dark_4.hdr</file>
+ <file type="properties" extension="xml">metadata/dark_4.xml</file>
+ <file type="properties" extension="xsl">metadata/dark_4.xsl</file>
+ <file type="preview" extension="png">dark_4.png</file>
+</manifest>

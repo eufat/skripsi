@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties>
+ <property name="prefix"></property>
+ <property name="name">dark_2</property>
+ <property name="namingformat">prefix_name</property>
+ <property name="timestampformat">!%Y-%m-%d_%H-%M-%S</property>
+ <property name="timestamp">2019-04-11_08-26-32</property>
+ <property name="countervalue">0048</property>
+</properties>

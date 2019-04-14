@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="bisbul_5_cut.xsl"?>
+<properties><header><key field="sensor type">FX10</key>
+        <key field="sensor id">1200018_Elcee</key>
+        <key field="frame rate">25</key>
+        <key field="integration time">10</key>
+        <key field="samples">512</key>
+        <key field="active bands">224</key>
+        <key field="spatial binning">2</key>
+        <key field="spectral binning">2</key>
+        <key field="frames recorded">512</key>
+        <key field="frames dropped">0</key>
+        <key field="data format">BIL</key>
+        <key field="date">2019-04-11</key>
+        <key field="date text">Thursday, April 11, 2019</key>
+        <key field="time">09:28:45</key>
+        <key field="calibration pack">C:/Users/Public/Documents/Specim/CalibrationPacks/1200018_20180605_FX_calpack.scp</key>
+    </header>
+    <userdefined><key field="sample name">bisbul_5_cut</key>
+        <key field="operator">daun</key>
+        <key field="description"></key>
+        <key field="sensor temperature">49.941131591797</key>
+        <key field="sensor prefix"></key>
+    </userdefined>
+</properties>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+ <file extension="raw" type="capture">capture/bisbul_1_cut.raw</file>
+ <file extension="hdr" type="capture">capture/bisbul_1_cut.hdr</file>
+ <file extension="xml" type="properties">metadata/bisbul_1_cut.xml</file>
+ <file extension="xsl" type="properties">metadata/bisbul_1_cut.xsl</file>
+ <file extension="png" type="preview">bisbul_1_cut.png</file>
+</manifest>
