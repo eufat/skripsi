@@ -14,16 +14,15 @@ cropping = False
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to the image")
 ap.add_argument("-r", "--repo", required=True, help="Path to the directory")
-ap.add_argument("-d", "--date", required=True, help="Date of image taken")
 ap.add_argument("-w", "--width", required=True, help="Width of image taken")
 
 args = vars(ap.parse_args())
 
 repo_dir = args["repo"]
-date_dir = args["date"]
 image_name = args["image"]
 width = int(args["width"])
 length = width
+ref_pt = []
 
 def click_and_crop(event, x, y, flags, param):
     # grab references to the global variables
@@ -33,7 +32,7 @@ def click_and_crop(event, x, y, flags, param):
     # (x, y) coordinates and indicate that cropping is being
     # performed
     if event == cv2.EVENT_LBUTTONDOWN:
-        ref_pt = [(x, y)]
+        ref_pt.append([x, y])
         cropping = True
 
     # check to see if the left mouse button was released
@@ -49,14 +48,14 @@ def click_and_crop(event, x, y, flags, param):
     cv2.imshow("image", image)
 
 dark_ref = envi.open(
-    '{}/{}/dark_ref/capture/dark_ref.hdr'.format(repo_dir, date_dir),
-    '{}/{}/dark_ref/capture/dark_ref.raw'.format(repo_dir, date_dir))
+    '{}/dark_ref/capture/dark_ref.hdr'.format(repo_dir),
+    '{}/dark_ref/capture/dark_ref.raw'.format(repo_dir))
 white_ref = envi.open(
-    '{}/{}/white_ref/capture/white_ref.hdr'.format(repo_dir, date_dir),
-    '{}/{}/white_ref/capture/white_ref.raw'.format(repo_dir, date_dir))
+    '{}/white_ref/capture/white_ref.hdr'.format(repo_dir),
+    '{}/white_ref/capture/white_ref.raw'.format(repo_dir))
 data_ref = envi.open(
-    '{}/{}/{}/capture/{}.hdr'.format(repo_dir, date_dir, image_name, image_name),
-    '{}/{}/{}/capture/{}.raw'.format(repo_dir, date_dir, image_name, image_name))
+    '{}/{}/capture/{}.hdr'.format(repo_dir, image_name, image_name),
+    '{}/{}/capture/{}.raw'.format(repo_dir, image_name, image_name))
 
 white_nparr = np.array(white_ref.load())
 dark_nparr = np.array(dark_ref.load())
@@ -67,8 +66,7 @@ corrected_nparr = np.divide(
     np.subtract(white_nparr, dark_nparr))
 
 # load the image, clone it, and setup the mouse callback function
-image_path = '{}/{}/{}/{}.png'.format(
-    repo_dir, date_dir, image_name, image_name)
+image_path = '{}/{}/{}.png'.format(repo_dir, image_name, image_name)
 image = cv2.imread(image_path)
 clone = image.copy()
 cv2.namedWindow("image")
@@ -89,15 +87,19 @@ while True:
     if key == ord("r"):
         rois = []
 
+        i = 1
         for point in ref_pt:
             x = point[0]
             y = point[1]
             roi = extract_roi(corrected_nparr, x, y, width, width)
             rois.append(roi)
 
-        save_path = "{}/{}/{}_rois.npy".format(repo_dir, date_dir, image_name)
-        print("Saved at {}.".format(save_path))
+            i = i + 1
+
+        save_path = "{}/{}_rois.npy".format(repo_dir, image_name)
         np.save(save_path, rois)
+        print("Saved at {}.".format(save_path))
+
         break
 
     # if the 'c' key is pressed, break from the loop
