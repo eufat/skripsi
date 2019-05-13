@@ -15,11 +15,13 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True, help="Path to the image")
 ap.add_argument("-r", "--repo", required=True, help="Path to the directory")
 ap.add_argument("-w", "--width", required=True, help="Width of image taken")
+ap.add_argument("-n", "--name", required=True, help="Name of image to save")
 
 args = vars(ap.parse_args())
 
 repo_dir = args["repo"]
 image_name = args["image"]
+save_name = args["name"]
 width = int(args["width"])
 length = width
 ref_pt = []
@@ -97,6 +99,10 @@ while True:
             i = i + 1
 
         save_path = "{}/{}_rois.npy".format(repo_dir, image_name)
+
+        if save_name:
+            save_path = "{}/{}_rois.npy".format(repo_dir, save_name)
+
         np.save(save_path, rois)
         print("Saved at {}.".format(save_path))
 
